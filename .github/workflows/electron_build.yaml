@@ -1,0 +1,17 @@
+name: Build electron on windows
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  Windows-Electron:
+    name: Windows-electron
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: run electron build
+        shell: pwsh
+        run: |
+          electron .
