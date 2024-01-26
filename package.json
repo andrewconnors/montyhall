@@ -1,7 +1,7 @@
 {
   "name": "monty2",
   "private": true,
-  "version": "v0.0.7",
+  "version": "v0.0.8",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -41,8 +41,8 @@
   },
   "main": "electron.js",
   "build": {
-    "appId": "com.example.myapp",
-    "productName": "My Electron App",
+    "appId": "com.andrewconnors.montyhallsim",
+    "productName": "MontyHallSim",
     "directories": {
       "output": "dist"
     }
