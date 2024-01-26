@@ -22,7 +22,8 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.2",
     "sort-by": "^0.0.2",
-    "xstate": "^5.5.1"
+    "xstate": "^5.5.1",
+    "electron-is-dev": "^2.0.0"
   },
   "devDependencies": {
     "@types/jest": "^29.5.11",
