@@ -45,7 +45,9 @@
     "appId": "io.andrewconnors.montyhallsim",
     "productName": "MontyHallSim",
     "files": [
-      "dist/**/*.{js,css,html,ttf}"
+      "dist/**/**/*.{js,css,html,ttf}",
+      "./electron.js",
+
     ],
     "directories": {
       "buildResources": "./"
