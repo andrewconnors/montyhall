@@ -9,18 +9,18 @@ jobs:
   build_on_mac:
     runs-on: macOS-latest
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v4
       with:
-        ref: electron
+        ref: main
     - uses: actions/setup-node@master
       with:
         node-version: 10.16
     - name: see directory
       run: ls
   build_on_win:
-      runs-on: windows-2016
+      runs-on: windows-latest
       steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v4
         with:
           ref: feature/github-actions        
       - uses: actions/setup-node@master
