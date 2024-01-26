@@ -22,7 +22,7 @@ jobs:
       steps:
       - uses: actions/checkout@v4
         with:
-          ref: feature/github-actions        
+          ref: main        
       - uses: actions/setup-node@master
         with:
           node-version: 10.16
