@@ -6,26 +6,25 @@ on:
     branches: [ main ]
 
 jobs:
-  release:
-    name: Windows-electron
-    runs-on: windows-latest
+  build_on_mac:
+    runs-on: macOS-latest
     steps:
-      - name: Check out Git repository
-        uses: actions/checkout@v4
-
-      - name: Install Node.js, NPM and Yarn
-        uses: actions/setup-node@v1
+    - uses: actions/checkout@master
+      with:
+        ref: electron
+    - uses: actions/setup-node@master
+      with:
+        node-version: 10.16
+    - name: see directory
+      run: ls
+  build_on_win:
+      runs-on: windows-2016
+      steps:
+      - uses: actions/checkout@master
         with:
-          node-version: 10
-
-      - build_on_win:
-        runs-on: windows-latest
-        steps:
-        - uses: actions/checkout@master
-          with:
-            ref: feature/github-actions        
-        - uses: actions/setup-node@master
-          with:
-            node-version: 10.16
-        - name: see directory
-          run: ls
+          ref: feature/github-actions        
+      - uses: actions/setup-node@master
+        with:
+          node-version: 10.16
+      - name: see directory
+        run: ls
