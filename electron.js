@@ -1,6 +1,7 @@
 // electron.js
-import { app, BrowserWindow } from 'electron';
-import path from 'path';
+const { app, BrowserWindow } = require('electron');
+const path = require('path');
+const isDev = require('electron-is-dev');
 
 let mainWindow;
 
@@ -13,7 +14,7 @@ function createWindow() {
     },
   });
 
-  const startURL = `file://${path.join(__dirname, '../build/index.html')}`;
+  const startURL = isDev ? 'http://localhost:5173' : `file://${path.join(__dirname, '../build/index.html')}`;
 
   mainWindow.loadURL(startURL);
 
