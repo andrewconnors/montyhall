@@ -7,7 +7,6 @@ import "./Styles.css"
 const StatsScreen = (props) => {
     const location = useLocation()
     const navigate = useNavigate()
-    console.log(location.state.numRuns)
     const handleReset = () => {
         navigate("/")
     }

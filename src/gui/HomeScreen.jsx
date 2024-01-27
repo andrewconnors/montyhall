@@ -3,7 +3,7 @@ import { Button, TextField, Select, MenuItem, FormControl,InputLabel,Stack, Typo
 import { grey, red } from '@mui/material/colors';
 import { useNavigate } from "react-router-dom";
 import './Styles.css';
-import { MontyHallSimulation } from "../logic/monty_hall"
+import { MontyHallSimulation, SimModes } from "../logic/monty_hall"
 
 const HomeScreen = () => {
   const [numRuns, setNumRuns] = useState('');
@@ -56,9 +56,9 @@ const HomeScreen = () => {
                 value={simulationType}
                 onChange={handleSimulationTypeChange}
             >
-                <MenuItem value="alwaysSwitch">Always Switch</MenuItem>
-                <MenuItem value="neverSwitch">Never Switch</MenuItem>
-                <MenuItem value="random">Random</MenuItem>
+                <MenuItem value={SimModes.ALWAYS_SWITCH}>Always Switch</MenuItem>
+                <MenuItem value={SimModes.NEVER_SWITCH}>Never Switch</MenuItem>
+                <MenuItem value={SimModes.RANDOM}>Random</MenuItem>
             </Select>
         </FormControl>
         <Typography variant="caption" color={red[600]}>{error}</Typography>
